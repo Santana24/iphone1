@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="IFo-Y1-APV">
+                                <rect key="frame" x="118" y="363.5" width="178" height="179"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkA-Q3-rRp">
+                                <rect key="frame" x="130" y="262" width="154" height="39.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <color key="textColor" red="0.20994293689999999" green="0.53804349900000004" blue="0.97287768129999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All rights reserved 2020 - 2021. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLw-sr-oAv">
+                                <rect key="frame" x="94" y="782" width="226" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Felipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSl-Vp-N9h">
+                                <rect key="frame" x="94" y="803" width="226" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IFo-Y1-APV" firstAttribute="top" secondItem="OkA-Q3-rRp" secondAttribute="bottom" constant="62" id="DEE-nT-XW3"/>
+                            <constraint firstItem="OkA-Q3-rRp" firstAttribute="centerX" secondItem="IFo-Y1-APV" secondAttribute="centerX" id="DKl-ke-Qe9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MSl-Vp-N9h" secondAttribute="bottom" constant="41" id="OmA-zf-wbc"/>
+                            <constraint firstItem="IFo-Y1-APV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="OtP-Zm-imu"/>
+                            <constraint firstItem="MSl-Vp-N9h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PQC-zL-WEf"/>
+                            <constraint firstItem="IFo-Y1-APV" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.2" id="Xmy-Tx-b7l"/>
+                            <constraint firstItem="MSl-Vp-N9h" firstAttribute="top" secondItem="ZLw-sr-oAv" secondAttribute="bottom" constant="3" id="eyz-0o-nae"/>
+                            <constraint firstItem="IFo-Y1-APV" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.43" id="kU7-GA-bqA"/>
+                            <constraint firstItem="IFo-Y1-APV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="koh-WA-vf8"/>
+                            <constraint firstItem="ZLw-sr-oAv" firstAttribute="width" secondItem="MSl-Vp-N9h" secondAttribute="width" id="qZz-aP-2Dg"/>
+                            <constraint firstItem="ZLw-sr-oAv" firstAttribute="centerX" secondItem="MSl-Vp-N9h" secondAttribute="centerX" id="vqu-Z1-4Dz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appstore" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

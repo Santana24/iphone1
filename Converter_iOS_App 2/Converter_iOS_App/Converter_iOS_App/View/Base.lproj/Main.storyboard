@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3o0-Z3-c9D">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Converter_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+        <!--Temprature-->
+        <scene sceneID="nfc-7Z-2BC">
+            <objects>
+                <viewController storyboardIdentifier="TemperatureViewController" id="aKr-IX-rCR" customClass="TemperatureViewController" customModule="Converter_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wdf-dF-Ebi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="temprature" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgv-AX-v0H">
+                                <rect key="frame" x="41.5" y="144" width="331" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CwU-kG-eQp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdT-hi-PWf">
+                                <rect key="frame" x="132" y="234" width="150" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Wps-bW-qnI"/>
+                                    <constraint firstAttribute="height" constant="35" id="cjV-4Q-HSH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert °C to °F"/>
+                                <connections>
+                                    <action selector="convertCelsiusToFahrenheitBtnAction:" destination="aKr-IX-rCR" eventType="touchUpInside" id="pxD-P4-GUV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulp-Ao-AtM">
+                                <rect key="frame" x="132" y="282" width="150" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="FiY-sZ-5Cv"/>
+                                    <constraint firstAttribute="width" constant="150" id="HNm-b0-pJb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert °F to °C"/>
+                                <connections>
+                                    <action selector="convertFahrenheitToCelsiusBtnAction:" destination="aKr-IX-rCR" eventType="touchUpInside" id="Zbz-d4-MFc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your answer is : 00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S47-CI-dwZ">
+                                <rect key="frame" x="126" y="357" width="162.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-Jw-sGB">
+                                <rect key="frame" x="313.5" y="199" width="59" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Clear Text">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTextBtnAction:" destination="aKr-IX-rCR" eventType="touchUpInside" id="kSa-2o-bmT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4S-Bq-TyI">
+                                <rect key="frame" x="41.5" y="199" width="85" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Hide Keyboard">
+                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideKeyboard:" destination="aKr-IX-rCR" eventType="touchUpInside" id="9qt-Gd-qxi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b11-RR-oDP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jgv-AX-v0H" firstAttribute="top" secondItem="b11-RR-oDP" secondAttribute="top" constant="100" id="09I-0s-XZI"/>
+                            <constraint firstItem="S47-CI-dwZ" firstAttribute="centerX" secondItem="Ulp-Ao-AtM" secondAttribute="centerX" id="5f2-32-MqN"/>
+                            <constraint firstItem="ZdT-hi-PWf" firstAttribute="centerX" secondItem="jgv-AX-v0H" secondAttribute="centerX" id="Aap-02-qER"/>
+                            <constraint firstItem="jgv-AX-v0H" firstAttribute="centerX" secondItem="b11-RR-oDP" secondAttribute="centerX" id="Q8U-uI-Tdv"/>
+                            <constraint firstItem="J4S-Bq-TyI" firstAttribute="leading" secondItem="jgv-AX-v0H" secondAttribute="leading" id="RFn-It-bNV"/>
+                            <constraint firstItem="Ulp-Ao-AtM" firstAttribute="top" secondItem="ZdT-hi-PWf" secondAttribute="bottom" constant="13" id="V1r-K7-Yzo"/>
+                            <constraint firstItem="4eg-Jw-sGB" firstAttribute="trailing" secondItem="jgv-AX-v0H" secondAttribute="trailing" id="Vdb-JP-5cM"/>
+                            <constraint firstItem="S47-CI-dwZ" firstAttribute="top" secondItem="Ulp-Ao-AtM" secondAttribute="bottom" constant="40" id="aXv-BA-fFI"/>
+                            <constraint firstItem="ZdT-hi-PWf" firstAttribute="top" secondItem="jgv-AX-v0H" secondAttribute="bottom" constant="40" id="cfq-eg-7ve"/>
+                            <constraint firstItem="jgv-AX-v0H" firstAttribute="width" secondItem="Wdf-dF-Ebi" secondAttribute="width" multiplier="0.8" id="exJ-MO-yNh"/>
+                            <constraint firstItem="Ulp-Ao-AtM" firstAttribute="centerX" secondItem="ZdT-hi-PWf" secondAttribute="centerX" id="ljp-Jx-aYK"/>
+                            <constraint firstItem="J4S-Bq-TyI" firstAttribute="centerY" secondItem="4eg-Jw-sGB" secondAttribute="centerY" id="n2q-a0-JGt"/>
+                            <constraint firstItem="4eg-Jw-sGB" firstAttribute="top" secondItem="jgv-AX-v0H" secondAttribute="bottom" constant="5" id="nVB-Ii-VJe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Temprature" image="hot" selectedImage="hot" id="BbI-YW-r4E">
+                        <inset key="imageInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="answerLabel" destination="S47-CI-dwZ" id="CAJ-Qk-vhu"/>
+                        <outlet property="enterTempratureValueTextField" destination="jgv-AX-v0H" id="W0d-cS-M63"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7h-6m-RMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608.6956521739132" y="-715.17857142857144"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="Gxs-W8-eek">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" id="3o0-Z3-c9D" customClass="TabBarViewController" customModule="Converter_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zFB-vs-l0o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="selectionIndicatorTintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aKr-IX-rCR" kind="relationship" relationship="viewControllers" id="Rkz-R5-D24"/>
+                        <segue destination="c18-a1-GbH" kind="relationship" relationship="viewControllers" id="Sgu-OJ-UI5"/>
+                        <segue destination="PQL-za-rCo" kind="relationship" relationship="viewControllers" id="vlG-5v-mEb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqh-AQ-UtG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="-356"/>
+        </scene>
+        <!--Currency-->
+        <scene sceneID="qWj-oN-75B">
+            <objects>
+                <viewController storyboardIdentifier="CurrencyViewController" id="c18-a1-GbH" customClass="CurrencyViewController" customModule="Converter_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOW-tu-OfS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ty0-BU-Gkh">
+                                <rect key="frame" x="41.5" y="144" width="331" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TaC-mh-7N1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-Gp-fKg">
+                                <rect key="frame" x="62" y="234" width="290" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="G4X-Aj-uEK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert CAD to USD"/>
+                                <connections>
+                                    <action selector="convertCADtoUSDBtnAction:" destination="c18-a1-GbH" eventType="touchUpInside" id="STC-Tr-Cea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlV-OH-OWd">
+                                <rect key="frame" x="62" y="291" width="290" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert USD to CAD"/>
+                                <connections>
+                                    <action selector="convertUSDtoCADBtnAction:" destination="c18-a1-GbH" eventType="touchUpInside" id="xDX-DI-sWY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your answer is : 00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0q-vs-iRB">
+                                <rect key="frame" x="126" y="375" width="162.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-eN-pUl">
+                                <rect key="frame" x="313.5" y="199" width="59" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Clear Text">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTextBtnAction:" destination="c18-a1-GbH" eventType="touchUpInside" id="hwv-6V-1HD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pH-jN-NXT">
+                                <rect key="frame" x="41.5" y="199" width="85" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Hide Keyboard">
+                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideKeyboard:" destination="c18-a1-GbH" eventType="touchUpInside" id="qPL-iy-0gO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M71-PI-cro"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7pH-jN-NXT" firstAttribute="centerY" secondItem="QQV-eN-pUl" secondAttribute="centerY" id="3QO-p2-dB2"/>
+                            <constraint firstItem="7pH-jN-NXT" firstAttribute="leading" secondItem="ty0-BU-Gkh" secondAttribute="leading" id="RPV-AP-kYf"/>
+                            <constraint firstItem="C0q-vs-iRB" firstAttribute="centerX" secondItem="RlV-OH-OWd" secondAttribute="centerX" id="Rgj-2k-nZT"/>
+                            <constraint firstItem="TYd-Gp-fKg" firstAttribute="centerX" secondItem="ty0-BU-Gkh" secondAttribute="centerX" id="S6T-Q1-Eho"/>
+                            <constraint firstItem="C0q-vs-iRB" firstAttribute="top" secondItem="RlV-OH-OWd" secondAttribute="bottom" constant="40" id="XJK-iD-z2v"/>
+                            <constraint firstItem="ty0-BU-Gkh" firstAttribute="top" secondItem="M71-PI-cro" secondAttribute="top" constant="100" id="ZMX-x1-Qjt"/>
+                            <constraint firstItem="RlV-OH-OWd" firstAttribute="top" secondItem="TYd-Gp-fKg" secondAttribute="bottom" constant="13" id="bWp-4T-fiq"/>
+                            <constraint firstItem="RlV-OH-OWd" firstAttribute="centerX" secondItem="TYd-Gp-fKg" secondAttribute="centerX" id="g3u-CF-gCA"/>
+                            <constraint firstItem="ty0-BU-Gkh" firstAttribute="centerX" secondItem="M71-PI-cro" secondAttribute="centerX" id="hD0-lx-8ye"/>
+                            <constraint firstItem="TYd-Gp-fKg" firstAttribute="top" secondItem="ty0-BU-Gkh" secondAttribute="bottom" constant="40" id="i4G-F3-lIe"/>
+                            <constraint firstItem="RlV-OH-OWd" firstAttribute="width" secondItem="TYd-Gp-fKg" secondAttribute="width" id="lGe-Lw-O65"/>
+                            <constraint firstItem="QQV-eN-pUl" firstAttribute="top" secondItem="ty0-BU-Gkh" secondAttribute="bottom" constant="5" id="mBl-UO-LOZ"/>
+                            <constraint firstItem="TYd-Gp-fKg" firstAttribute="width" secondItem="qOW-tu-OfS" secondAttribute="width" multiplier="0.7" id="xzz-ro-exJ"/>
+                            <constraint firstItem="ty0-BU-Gkh" firstAttribute="width" secondItem="qOW-tu-OfS" secondAttribute="width" multiplier="0.8" id="y05-MA-9Kb"/>
+                            <constraint firstItem="QQV-eN-pUl" firstAttribute="trailing" secondItem="ty0-BU-Gkh" secondAttribute="trailing" id="yQI-M1-H2m"/>
+                            <constraint firstItem="RlV-OH-OWd" firstAttribute="height" secondItem="TYd-Gp-fKg" secondAttribute="height" id="yrd-JR-cf8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Currency" image="money" selectedImage="money" id="nxE-ej-cD7">
+                        <inset key="imageInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="answerLabel" destination="C0q-vs-iRB" id="3Sz-kn-eMx"/>
+                        <outlet property="enterAmountValueTextField" destination="ty0-BU-Gkh" id="xje-2m-O5p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sw3-T7-RUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="-49"/>
+        </scene>
+        <!--Distance-->
+        <scene sceneID="ofC-vd-NC1">
+            <objects>
+                <viewController storyboardIdentifier="DistanceViewController" id="PQL-za-rCo" customClass="DistanceViewController" customModule="Converter_iOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qUP-Wl-GOu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="distance" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRs-uP-uTq">
+                                <rect key="frame" x="41.5" y="144" width="331" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xq4-hd-QPD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="33"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3Z-Hm-szx">
+                                <rect key="frame" x="62" y="234" width="290" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8wY-Af-JmB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert Kilometers to Miles"/>
+                                <connections>
+                                    <action selector="convertKmsToMilesBtnAction:" destination="PQL-za-rCo" eventType="touchUpInside" id="oAM-Mh-gKO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDw-SG-fxw">
+                                <rect key="frame" x="62" y="291" width="290" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Convert Miles to Kilometers"/>
+                                <connections>
+                                    <action selector="convertMilesToKmsBtnAction:" destination="PQL-za-rCo" eventType="touchUpInside" id="Hnf-3x-0em"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your answer is : 00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjE-V8-cPh">
+                                <rect key="frame" x="126" y="375" width="162.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCs-Xf-ykv">
+                                <rect key="frame" x="313.5" y="199" width="59" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Clear Text">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTextBtnAction:" destination="PQL-za-rCo" eventType="touchUpInside" id="484-us-3Tp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1M-uG-u2Y">
+                                <rect key="frame" x="41.5" y="199" width="85" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Hide Keyboard">
+                                    <color key="titleColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideKeyboard:" destination="PQL-za-rCo" eventType="touchUpInside" id="dxV-dt-ZzW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K8u-L5-W8X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QDw-SG-fxw" firstAttribute="height" secondItem="y3Z-Hm-szx" secondAttribute="height" id="3RN-fx-oJ2"/>
+                            <constraint firstItem="QDw-SG-fxw" firstAttribute="width" secondItem="y3Z-Hm-szx" secondAttribute="width" id="BU9-rw-DqU"/>
+                            <constraint firstItem="hRs-uP-uTq" firstAttribute="centerX" secondItem="K8u-L5-W8X" secondAttribute="centerX" id="CQU-Th-gtO"/>
+                            <constraint firstItem="j1M-uG-u2Y" firstAttribute="leading" secondItem="hRs-uP-uTq" secondAttribute="leading" id="Cx6-TL-Drp"/>
+                            <constraint firstItem="xCs-Xf-ykv" firstAttribute="trailing" secondItem="hRs-uP-uTq" secondAttribute="trailing" id="QWf-RD-laG"/>
+                            <constraint firstItem="y3Z-Hm-szx" firstAttribute="width" secondItem="qUP-Wl-GOu" secondAttribute="width" multiplier="0.7" id="RjP-fa-XAc"/>
+                            <constraint firstItem="j1M-uG-u2Y" firstAttribute="centerY" secondItem="xCs-Xf-ykv" secondAttribute="centerY" id="XtB-at-MSf"/>
+                            <constraint firstItem="IjE-V8-cPh" firstAttribute="top" secondItem="QDw-SG-fxw" secondAttribute="bottom" constant="40" id="a3B-fX-OYT"/>
+                            <constraint firstItem="IjE-V8-cPh" firstAttribute="centerX" secondItem="QDw-SG-fxw" secondAttribute="centerX" id="blc-Ls-GY6"/>
+                            <constraint firstItem="hRs-uP-uTq" firstAttribute="width" secondItem="qUP-Wl-GOu" secondAttribute="width" multiplier="0.8" id="dqq-WY-fGi"/>
+                            <constraint firstItem="hRs-uP-uTq" firstAttribute="top" secondItem="K8u-L5-W8X" secondAttribute="top" constant="100" id="j3c-vP-RHF"/>
+                            <constraint firstItem="xCs-Xf-ykv" firstAttribute="top" secondItem="hRs-uP-uTq" secondAttribute="bottom" constant="5" id="k1y-0j-u2x"/>
+                            <constraint firstItem="y3Z-Hm-szx" firstAttribute="centerX" secondItem="hRs-uP-uTq" secondAttribute="centerX" id="kZN-gC-DAS"/>
+                            <constraint firstItem="QDw-SG-fxw" firstAttribute="top" secondItem="y3Z-Hm-szx" secondAttribute="bottom" constant="13" id="oGN-QW-bbF"/>
+                            <constraint firstItem="y3Z-Hm-szx" firstAttribute="top" secondItem="hRs-uP-uTq" secondAttribute="bottom" constant="40" id="sD1-S8-lyU"/>
+                            <constraint firstItem="QDw-SG-fxw" firstAttribute="centerX" secondItem="y3Z-Hm-szx" secondAttribute="centerX" id="wyd-E3-3GJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Distance" image="measuring-tape" selectedImage="measuring-tape" id="Z7L-8b-zoV">
+                        <inset key="imageInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="answerLabel" destination="IjE-V8-cPh" id="P1T-H9-rQQ"/>
+                        <outlet property="enterDistanceValueTextField" destination="hRs-uP-uTq" id="R9K-EX-cjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2J-AG-rLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2345" y="-356"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hot" width="32" height="32"/>
+        <image name="measuring-tape" width="32" height="32"/>
+        <image name="money" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
